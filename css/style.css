@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* CSS Document */
+#page{
+	float:left;
+	width: 100%;
+}
+#page{float:left;}
+
+h1{}
+h2{border-bottom:thin solid #efefef}
+form{padding:4px;}
+label{font-weight:bold;}
+
+
+#header{
+	float:left;
+	width: 100%;
+	background-color: #000066;
+	border-radius: 6px
+}
+
+#header-text{float:left; padding:5px; font-size:1.4em; color:#f2f2f2; margin:20px}
+
+#top-nav{float:left; width:90%; text-align:right; color:#666; margin-right:50px}
+
+#sidebar{float:left; width:20%; padding:10px; background-color:#f2f2f2; 
+		border-radius: 6px; margin-right:10px}
+
+#main{float:left;width:75%; border-left:thin solid #ccc; padding-left:20px}
+
+ul.sport-list, ul.athlete-list{width:400px;display:inline; padding:5px}
+ul.sport-list li, ul.athlete-list li{float:left; width:90%;list-style:none; border-bottom:thin solid #ccc; background-color:#ffffcc; margin-bottom:10px; padding:6px; border-radius:4px; margin:10px; padding:10px}
+
+ul.athlete-list li{background-color:#efefef; border:thin solid #ccc; float:left; width:400px;}
+
+.sport-name{float:left; font-size:1.1em; font-weight:bold; width:100%}
+.sport-action{float:left; width:100%; text-align:right;}
+
+#sidebar a{color:#000066; font-size:1.4em; text-decoration:none; font-weight:bold}
+#sidebar a:hover{text-decoration:underline; color:#000099}
+.sport-action a{color:#660000}
+.sport-action a:visited{color:#330000}
+.sport-action a:hover{color:#cc0000}
+
+
