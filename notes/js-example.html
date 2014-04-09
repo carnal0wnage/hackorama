@@ -1,0 +1,51 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script language="Javascript">
+	
+	$(document).ready(function(){
+
+		// execute is button is clicked
+		$('button#submit').click(function(){
+			//collect inputs
+			var fn = $('input#first').val();
+			var ln = $('input#last').val();
+			var full_name = fn + ' ' + ln;
+			
+			//if name is not entered, stop them
+			if( !fn.length || !ln.length){
+				alert('You need to enter your name');
+				}
+
+			else{ 
+				// verify their inputs
+				confirmation = confirm('You say your name is ' + full_name + '. Is that right?');
+					
+					// if they confirm, post form and clear inputs
+					if(confirmation){
+						alert('You confirmed!');
+						$('form#form').submit();
+						$('input').val("");
+						}
+
+					//if the say no, go back to form	
+					else{
+						alert('You did NOT confirm :(');
+					}
+				}
+			
+		})
+	})
+
+</script>
+</head>
+
+<body>
+
+<form id="form" method="post">
+	<p>first name: <input id="first" name="first"></p>
+	<p>last name: <input id="last" name="last"></p>
+	<p><button id="submit" type="button">Submit</button></p>
+
+</body>
+</html>

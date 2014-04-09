@@ -2,18 +2,25 @@
 
 
 <h2>Drop Tables...</h2>
-<cfquery datasource="kebabdb" >
-delete from Sport;
-delete from Athlete;
-delete from User;
-</cfquery>
+<cftry>
+	
+	<cfquery datasource="kebabdb" >
+		delete from Athlete;		
+		delete from Sport;
+		delete from User;
+	</cfquery>
+<cfcatch>
+	can't delete
+<cfdump var="#cfcatch#">
+</cfcatch>
 
+</cftry>
 <h2>Populating Users...</h2>
 <cfset user = entityNew("User")>
 <cfset user.setFirstName("Jonathan")>
 <cfset user.setLastName("Arp")>
 <cfset user.setUsername("hacksaw")>
-<cfset user.setPassword("wowa!!thiseff0rtIt00ktomaketh!5passwordstr0ngwaswa5tedbecause0fth!sid!otdeveloper")>	
+<cfset user.setPassword("wowa!!St0ngPassword!")>	
 <cfset entitySave(user)>
 <cfset ormFlush()>
 ~
@@ -112,10 +119,7 @@ Art Barter
 <h2>Done.</h2>
 
 <p>
-	<a href="/hackorama" >Please Continue ==></a>
+	<a href="/" >Please Continue ==></a>
 </p>
 
 
-
-
- 
