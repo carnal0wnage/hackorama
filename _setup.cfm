@@ -37,7 +37,16 @@
 </cftry>
 
 
+<h2>Reset ORM</h2>
+<cfset ormReload()>
 
+
+<h2>Remove Constraints</h2>
+
+<cfquery datasource="kebabdb">
+alter table Athlete drop foreign key FK3A53619F8DA35EE3;
+</cfquery>
+<p>Done!</p>
 
 <h2>Populating Users...</h2>
 <cfset user = entityNew("User")>
