@@ -3,18 +3,42 @@
 
 <h2>Drop Tables...</h2>
 <cftry>
-	
 	<cfquery datasource="kebabdb" >
 		delete from Athlete;		
-		delete from Sport;
-		delete from User;
 	</cfquery>
-<cfcatch>
-	can't delete
-<cfdump var="#cfcatch#">
-</cfcatch>
+	
+	<cfcatch>
+		>> can't delete Athlete<br/>
+	</cfcatch>
 
 </cftry>
+
+<cftry>
+	<cfquery datasource="kebabdb" >
+		delete from User;		
+	</cfquery>
+	
+	<cfcatch>
+		>> can't delete User <br/>
+	</cfcatch>
+
+</cftry>
+
+
+<cftry>
+	<cfquery datasource="kebabdb" >
+		delete from Sport;		
+	</cfquery>
+	
+	<cfcatch>
+		>> can't delete Sport <br/>
+	</cfcatch>
+
+</cftry>
+
+
+
+
 <h2>Populating Users...</h2>
 <cfset user = entityNew("User")>
 <cfset user.setFirstName("Jonathan")>
